@@ -1,0 +1,23 @@
+{
+  "name": "nemesys-mockup",
+  "version": "1.0.0",
+  "main": "nemesys.js",
+  "license": "GPL-3.0",
+  "description": "Nemesys measurement software mockup for GUI development",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fondazionebordoni/nemesys-mockup.git"
+  },
+  "author": "Giuseppe Pantanetti <gpantanetti@fub.it>",
+  "bugs": {
+    "url": "https://github.com/fondazionebordoni/nemesys-mockup/issues"
+  },
+  "homepage": "https://github.com/fondazionebordoni/nemesys-mockup#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "ws": "^7.0.1"
+  }
+}
