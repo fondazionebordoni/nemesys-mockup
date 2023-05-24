@@ -1,4 +1,4 @@
-const WebSocket = require('ws');
+import { WebSocket } from 'ws';
 
 const ws = new WebSocket('ws://127.0.0.1:54201');
 

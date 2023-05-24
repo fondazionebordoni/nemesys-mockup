@@ -1,6 +1,6 @@
-var WebSocketServer = require("ws").Server; //importo la libreria per creare il server
+import { WebSocketServer } from 'ws';
 
-var arrayOfMessages = [
+const arrayOfMessages = [
   { type: "profilation", content: { done: "False" } },
   { type: "profilation", content: { done: "True" } },
   { type: "resume", content: { test_type: "ping" } },
@@ -80,7 +80,7 @@ var arrayOfMessages = [
   }
 ];
 
-wss = new WebSocketServer({ port: 54201 });
+const wss = new WebSocketServer({ port: 54201 });
 
 wss.on("connection", function(ws) {
   ws.on("message", function(message) {

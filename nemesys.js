@@ -1,6 +1,6 @@
-var WebSocketServer = require("ws").Server;
+import { WebSocketServer } from 'ws';
 
-var arrayOfMessages = [
+const arrayOfMessages = [
   {
     type: "wait",
     serial: "204549be056ab911caeb2bd6901edddc",
@@ -66,6 +66,7 @@ var arrayOfMessages = [
   { type: "profilation", content: { done: "True" } },
   {
     type: "wait",
+    serial: "204549be056ab911caeb2bd6901edddc",
     content: { seconds: 30, message: "Aspetto 30 secondi prima di continuare" }
   },
 
@@ -79,6 +80,7 @@ var arrayOfMessages = [
   },
   {
     type: "wait",
+    serial: "204549be056ab911caeb2bd6901edddc",
     content: { seconds: 30, message: "Aspetto 30 secondi prima di continuare" }
   },
   {
@@ -91,6 +93,7 @@ var arrayOfMessages = [
   },
   {
     type: "wait",
+    serial: "204549be056ab911caeb2bd6901edddc",
     content: { seconds: 30, message: "Aspetto 30 secondi prima di continuare" }
   },
 
@@ -123,10 +126,12 @@ var arrayOfMessages = [
   },
   {
     type: "wait",
+    serial: "204549be056ab911caeb2bd6901edddc",
     content: { seconds: 30, message: "Aspetto 30 secondi prima di continuare" }
   },
   {
     type: "wait",
+    serial: "204549be056ab911caeb2bd6901edddc",
     content: {
       seconds: 779,
       message: "Licenza di misura scaduta o non valida per le misure"
@@ -134,6 +139,7 @@ var arrayOfMessages = [
   },
   {
     type: "wait",
+    serial: "204549be056ab911caeb2bd6901edddc",
     content: { seconds: 30, message: "Aspetto 30 secondi prima di continuare" }
   },
 
@@ -282,6 +288,7 @@ var arrayOfMessages = [
 
   {
     type: "wait",
+    serial: "204549be056ab911caeb2bd6901edddc",
     content: { seconds: 30, message: "Aspetto 30 secondi prima di continuare" }
   },
 
@@ -320,7 +327,7 @@ var arrayOfMessages = [
   }
 ];
 
-wss = new WebSocketServer({ port: 54201 });
+const wss = new WebSocketServer({ host: "0.0.0.0", port: 54201 });
 
 wss.on("connection", function(ws) {
   ws.on("message", function(message) {
